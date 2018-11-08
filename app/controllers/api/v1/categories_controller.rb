@@ -1,5 +1,5 @@
 class Api::V1::CategoriesController < ApplicationController
- skip_before_action :check_authentication, only: [ :index ]
+ skip_before_action :check_authentication, only: [ :index, :show ]
 
   def index
     render json: Category.all, include: { details: {} }
