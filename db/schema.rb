@@ -38,10 +38,12 @@ ActiveRecord::Schema.define(version: 2018_11_01_142335) do
   end
 
   create_table "resource_categories", force: :cascade do |t|
-    t.integer "category_id"
-    t.integer "resource_id"
+    t.bigint "category_id"
+    t.bigint "resource_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_resource_categories_on_category_id"
+    t.index ["resource_id"], name: "index_resource_categories_on_resource_id"
   end
 
   create_table "resource_details", force: :cascade do |t|
@@ -66,10 +68,8 @@ ActiveRecord::Schema.define(version: 2018_11_01_142335) do
     t.float "longitude"
     t.float "latitude"
     t.bigint "user_id"
-    t.bigint "resource_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["resource_category_id"], name: "index_resources_on_resource_category_id"
     t.index ["user_id"], name: "index_resources_on_user_id"
   end
 
@@ -86,6 +86,5 @@ ActiveRecord::Schema.define(version: 2018_11_01_142335) do
   add_foreign_key "category_details", "languages"
   add_foreign_key "resource_details", "languages"
   add_foreign_key "resource_details", "resources"
-  add_foreign_key "resources", "resource_categories"
   add_foreign_key "resources", "users"
 end

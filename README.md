@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+**************************************
+This is a digital tool enabling refugees/immigrants to navigate and find resources in Houston in their language, while allowing service providers to add and update information.
