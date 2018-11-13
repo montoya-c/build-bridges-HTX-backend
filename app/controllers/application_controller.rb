@@ -8,6 +8,8 @@ class ApplicationController < ActionController::API
   def define_selected_language
     if(params[:language].is_a? String)
       ApplicationRecord.selected_language = Language.find_by(name:params[:language])
+    else
+      ApplicationRecord.selected_language = Language.first
     end
   end
 

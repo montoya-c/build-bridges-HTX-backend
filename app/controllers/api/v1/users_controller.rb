@@ -8,12 +8,12 @@ class Api::V1::UsersController < ApplicationController
       token = encode_token(user_id: user.id)
       render json: {user: user, jwt: token}, status: :created
     else
-      render json: {error 'failed to create user'}, status: :not_acceptable
+      render json: {error: 'failed to create user'}, status: :not_acceptable
     end
   end
 
   def profile
-    render json: current_user
+    render json: current_user, include: { resources: { include: [ :details ]}}
   end
 
   private

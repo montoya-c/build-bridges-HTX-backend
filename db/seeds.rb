@@ -16,12 +16,13 @@ Language.delete_all
 
 user1 = User.create(username:"Amaanah", password_digest: BCrypt::Password.create('a123'), email:"info@refugeelink.com", organization_name:"Amaanah Refugee Services")
 user2 = User.create(username:"Tahirih", password_digest: BCrypt::Password.create('t123'), email:"houston@tahirih.org", organization_name:"Tahirih Justice Center")
-user3 = User.create(username:"BEI", password_digest: BCrypt::Password.create('b123'), email:"refugee@bei.edu", organization_name:"Bilingual Education Institute")
+user3 = User.create(username:"BEI", password: BCrypt::Password.create('b123'), email:"refugee@bei.edu", organization_name:"Bilingual Education Institute")
 
 
 resource1 =Resource.create(longitude:"-95.51719809999997", latitude:"29.701873", user_id: user1.id)
-resource2 =Resource.create(longitude:"-95.47278419999998", latitude:"29.748458", user_id: user2.id)
-resource3 =Resource.create(longitude:"-95.48671109999998", latitude:"29.73236739999999", user_id: user3.id)
+resource2 =Resource.create(longitude:"-95.51719809999997", latitude:"29.701873", user_id: user1.id)
+resource3 =Resource.create(longitude:"-95.47278419999998", latitude:"29.748458", user_id: user2.id)
+resource4 =Resource.create(longitude:"-95.48671109999998", latitude:"29.73236739999999", user_id: user3.id)
 
 # category1 = Category.create(category_id: category1.id)
 # category2 = Category.create(category_id: category2.id)
@@ -451,6 +452,6 @@ resourceDetail2= ResourceDetail.create(program_name:"Awesome Academy", descripti
   - Academic program
   - Soccer Program ",
    address:"7322 Southwest Freeway suite 1560
-  Houston, Texas 77074", telephone:"713) 370-3063", website:"www.refugeelink.com/awesome-academy/", hours:"M-F 9:30am - 4:30pm", eligibility:"Please contact office for more information.", language_spoken:"English, Spanish, Arabic", resource_id:resource1.id, language_id:language1.id)
-resourceDetail3= ResourceDetail.create(program_name:"Tahirih", description:"Pro bono legal services, social services case management for women and girls fleeing gender-based violence.", services:"", address:"1717 St.James Place, suite 450, Houston TX 77056", telephone:"(713)469-0100", website:"www.tahirih.org", hours:"", eligibility:"", language_spoken:"", resource_id: resource2.id, language_id:language1.id)
-resourceDetail4= ResourceDetail.create(program_name:"BEI Refugee Program", description:"Free levelled ESL classes and ongoing classes offered in various locations throughout Southwest Houston.", services:"Provides free ESL classes for refugees, asylees, Cuban/Haitian paroles, and VOT.", address:"6060 Richmond Ave., Suite 180, Houston, TX 77057", telephone:"(713) 789-0333", website:"www.bei.edu", hours:"M-F 8:30AM-9:00PM, Sat 8:30AM - 12:00PM", eligibility:"Must bring I-94/ proof of status.", language_spoken:"English, Spanish, Burmese, Arabic, Amharic, French, Tigrinya", resource_id:resource3.id, language_id:language1.id)
+  Houston, Texas 77074", telephone:"713) 370-3063", website:"www.refugeelink.com/awesome-academy/", hours:"M-F 9:30am - 4:30pm", eligibility:"Please contact office for more information.", language_spoken:"English, Spanish, Arabic", resource_id:resource2.id, language_id:language1.id)
+resourceDetail3= ResourceDetail.create(program_name:"Tahirih", description:"Pro bono legal services, social services case management for women and girls fleeing gender-based violence.", services:"", address:"1717 St.James Place, suite 450, Houston TX 77056", telephone:"(713)469-0100", website:"www.tahirih.org", hours:"", eligibility:"", language_spoken:"", resource_id: resource3.id, language_id:language1.id)
+resourceDetail4= ResourceDetail.create(program_name:"BEI Refugee Program", description:"Free levelled ESL classes and ongoing classes offered in various locations throughout Southwest Houston.", services:"Provides free ESL classes for refugees, asylees, Cuban/Haitian paroles, and VOT.", address:"6060 Richmond Ave., Suite 180, Houston, TX 77057", telephone:"(713) 789-0333", website:"www.bei.edu", hours:"M-F 8:30AM-9:00PM, Sat 8:30AM - 12:00PM", eligibility:"Must bring I-94/ proof of status.", language_spoken:"English, Spanish, Burmese, Arabic, Amharic, French, Tigrinya", resource_id:resource4.id, language_id:language1.id)
