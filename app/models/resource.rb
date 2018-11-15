@@ -1,6 +1,6 @@
 class Resource < ApplicationRecord
   belongs_to :user
-  has_many :resource_details
+  has_many :resource_details, dependent: :destroy
   has_many :resource_categories
   has_many :categories, through: :resource_categories
 

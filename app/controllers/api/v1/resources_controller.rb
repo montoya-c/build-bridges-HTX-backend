@@ -10,11 +10,16 @@ class Api::V1::ResourcesController < ApplicationController
   def update
     resource = Resource.find(params[:id])
     resource.update(resource_params)
-    render json: resource
+    render json: resource, methods: [ :resource_details, :category_ids]
   end
 
   def index
     render json: Resource.all, include: [ :details ]
+  end
+
+  def show
+    resource = Resource.find(params[:id])
+    render json: resource, methods: [ :details, :resource_details, :category_ids]
   end
 
   def destroy
@@ -25,7 +30,7 @@ class Api::V1::ResourcesController < ApplicationController
   private
 
   def resource_params
-    params.require(:resource).permit(:longitude, :latitude, :user_id, category_ids: [], resource_details_attributes:[ [
+    params.permit(:longitude, :latitude, :user_id, category_ids: [], resource_details_attributes:[ [
         :id,
         :program_name, :description, :services, :address, :telephone, :website, :hours, :eligibility, :language_spoken, :language_id
 

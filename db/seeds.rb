@@ -455,3 +455,26 @@ resourceDetail2= ResourceDetail.create(program_name:"Awesome Academy", descripti
   Houston, Texas 77074", telephone:"713) 370-3063", website:"www.refugeelink.com/awesome-academy/", hours:"M-F 9:30am - 4:30pm", eligibility:"Please contact office for more information.", language_spoken:"English, Spanish, Arabic", resource_id:resource2.id, language_id:language1.id)
 resourceDetail3= ResourceDetail.create(program_name:"Tahirih", description:"Pro bono legal services, social services case management for women and girls fleeing gender-based violence.", services:"", address:"1717 St.James Place, suite 450, Houston TX 77056", telephone:"(713)469-0100", website:"www.tahirih.org", hours:"", eligibility:"", language_spoken:"", resource_id: resource3.id, language_id:language1.id)
 resourceDetail4= ResourceDetail.create(program_name:"BEI Refugee Program", description:"Free levelled ESL classes and ongoing classes offered in various locations throughout Southwest Houston.", services:"Provides free ESL classes for refugees, asylees, Cuban/Haitian paroles, and VOT.", address:"6060 Richmond Ave., Suite 180, Houston, TX 77057", telephone:"(713) 789-0333", website:"www.bei.edu", hours:"M-F 8:30AM-9:00PM, Sat 8:30AM - 12:00PM", eligibility:"Must bring I-94/ proof of status.", language_spoken:"English, Spanish, Burmese, Arabic, Amharic, French, Tigrinya", resource_id:resource4.id, language_id:language1.id)
+
+
+
+
+
+
+resourceDetail1= ResourceDetail.create(program_name:"Transformed program", description:"offer support to single mothers that have arrived through the refugee resettlement process in the areas of financial literacy, employment, language, transportation, and housing.", services:" services are customized based on the specific needs and goals of each Transformed mother. Services include:
+- Rental credits
+- Utility assistance
+- Transportation assistances
+- Social integration
+- Financial literacy
+- Employment referrals
+- English as a second language classes",
+ address:"7322 Southwest Freeway suite 1560
+Houston, Texas 77074", telephone:"(713) 370-3063", website:"www.refugeelink.com/transformed/", hours:"M-F 9:30am - 4:30pm", eligibility:"Must bring I-94/ proof of status,", language_spoken:"English, Spanish, Arabic", resource_id:resource1.id, language_id:language2.id)
+resourceDetail2= ResourceDetail.create(program_name:"Awesome Academy", description:"Awesome Academy is an in-school, after-school, and athletic service that provides academic and social support for refugees in elementary and middle schools. We serve 400 students in partnership with Houston and Alief, and Austin Independent School Districts.", services:"support children both socially and academically.
+  - Academic program
+  - Soccer Program ",
+   address:"7322 Southwest Freeway suite 1560
+  Houston, Texas 77074", telephone:"713) 370-3063", website:"www.refugeelink.com/awesome-academy/", hours:"M-F 9:30am - 4:30pm", eligibility:"Please contact office for more information.", language_spoken:"English, Spanish, Arabic", resource_id:resource2.id, language_id:language2.id)
+resourceDetail3= ResourceDetail.create(program_name:"Tahirih", description:"Pro bono legal services, social services case management for women and girls fleeing gender-based violence.", services:"", address:"1717 St.James Place, suite 450, Houston TX 77056", telephone:"(713)469-0100", website:"www.tahirih.org", hours:"", eligibility:"", language_spoken:"", resource_id: resource3.id, language_id:language2.id)
+resourceDetail4= ResourceDetail.create(program_name:"BEI Refugee Program", description:"Free levelled ESL classes and ongoing classes offered in various locations throughout Southwest Houston.", services:"Provides free ESL classes for refugees, asylees, Cuban/Haitian paroles, and VOT.", address:"6060 Richmond Ave., Suite 180, Houston, TX 77057", telephone:"(713) 789-0333", website:"www.bei.edu", hours:"M-F 8:30AM-9:00PM, Sat 8:30AM - 12:00PM", eligibility:"Must bring I-94/ proof of status.", language_spoken:"English, Spanish, Burmese, Arabic, Amharic, French, Tigrinya", resource_id:resource4.id, language_id:language2.id)
