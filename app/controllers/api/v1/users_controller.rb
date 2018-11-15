@@ -9,6 +9,7 @@ class Api::V1::UsersController < ApplicationController
       render json: {user: user, jwt: token}, status: :created
     else
       render json: {error: 'failed to create user'}, status: :not_acceptable
+
     end
   end
 
@@ -18,6 +19,6 @@ class Api::V1::UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:username, :password, :email, :organization_name)
+    params.permit(:username, :password, :email, :organization_name)
   end
 end

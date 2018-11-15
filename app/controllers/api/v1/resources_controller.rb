@@ -1,10 +1,10 @@
 class Api::V1::ResourcesController < ApplicationController
-
+  skip_before_action :check_authentication, only: [ :show, :index ]
   def create
     resource = Resource.new(resource_params)
     resource.user = current_user
     resource.save
-    render json: resource
+    render json: resource, methods: [:details]
   end
 
   def update
